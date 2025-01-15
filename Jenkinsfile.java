@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Clone Repository') {
             steps {
-                git 'https://github.com/tuo-utente/tuo-repository.git'
+                git 'https://github.com/Ste0981/jenkins-git-integration.git'
             }
         }
         stage('Build') {
