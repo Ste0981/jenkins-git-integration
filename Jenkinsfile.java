@@ -1,31 +1,27 @@
 pipeline {
     agent any
-
     stages {
-        stage('Checkout') {
+        stage('Clone Repository') {
             steps {
-                git 'https://github.com/tuo-username/jenkins-git-integration.git'
+                git 'https://github.com/tuo-utente/tuo-repository.git'
             }
         }
         stage('Build') {
             steps {
                 echo 'Building...'
-                // Aggiungi qui i tuoi comandi di build, ad esempio:
-                // sh 'mvn clean install'
+                // Aggiungi i tuoi comandi di build qui
             }
         }
         stage('Test') {
             steps {
                 echo 'Testing...'
-                // Aggiungi qui i tuoi comandi di test, ad esempio:
-                // sh 'mvn test'
+                // Aggiungi i tuoi comandi di test qui
             }
         }
         stage('Deploy') {
             steps {
                 echo 'Deploying...'
-                // Aggiungi qui i tuoi comandi di deploy, ad esempio:
-                // sh 'scp target/*.jar user@server:/path/to/deploy'
+                // Aggiungi i tuoi comandi di deploy qui
             }
         }
     }
